@@ -42,12 +42,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     setInterval(nextSlide, 5000);
 
-    // 3. Smooth Scroll
+    // --- GANTI BAGIAN SMOOTH SCROLL DI script.js DENGAN INI ---
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href');
+    
+            // PENCEGAHAN ERROR:
+            // Jika link cuma "#" atau kosong, jangan lakukan apa-apa
+            if (targetId === '#' || targetId === '') {
+                e.preventDefault();
+                return; 
+            }
+    
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if(target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            const target = document.querySelector(targetId);
+            
+            if(target){
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
         });
     });
 
