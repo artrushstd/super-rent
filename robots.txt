@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://super-rent.github.io/sitemap.xml
