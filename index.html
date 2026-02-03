@@ -2,368 +2,381 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rental Mobil Jogja Marketplace | Super.Rent 24 Jam</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Promo Rental Mobil Jogja 24 Jam | Super.Rent</title>
     
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Marketplace Rental Mobil Jogja Terlengkap. Lepas kunci mulai 199K, City Tour murah, Hiace & Alphard mewah. Booking online aman & terpercaya.">
-    <meta name="keywords" content="rental mobil jogja 24 jam, tour keliling jogja murah, rental mobil jogja murah dan aman, rental mobil jogja lepas kunci, sewa hiace jogja, rental innova reborn jogja">
-    <meta name="theme-color" content="#87CEEB">
-
-    <!-- Styles & Fonts -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Meta untuk Closing -->
+    <meta name="description" content="Diskon Hari Ini! Rental Mobil Jogja Lepas Kunci mulai 199rb. Unit Ready, Bersih, Antar Jemput 24 Jam. Klik untuk Booking Cepat.">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Schema.org (Product Marketplace) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "AutoRental",
-      "name": "Super.Rent Marketplace",
-      "image": "https://super-rent.github.io/assets/logo.png",
-      "priceRange": "Rp199.000 - Rp3.199.000",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Yogyakarta",
-        "addressCountry": "ID"
-      },
-      "telephone": "+6288225648186"
-    }
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- 1. CORE VARIABLES (High Conversion Palette) --- */
+        :root {
+            --primary: #87CEEB; /* Sky Blue - Branding */
+            --primary-bg: #F0F8FF;
+            --cta-green: #25D366; /* WhatsApp Green - TRUST & ACTION */
+            --cta-orange: #FF6B00; /* Urgency Orange */
+            --dark: #0f172a;
+            --text: #334155;
+            --white: #ffffff;
+            --danger: #ef4444;
+            --shadow-card: 0 4px 20px rgba(0,0,0,0.08);
+            --radius: 16px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; -webkit-tap-highlight-color: transparent; }
+        body { background: #f8fafc; color: var(--text); padding-bottom: 80px; /* Space for Sticky Bar */ }
+        a { text-decoration: none; color: inherit; }
+
+        /* --- 2. HEADER (Simple & Trust) --- */
+        .header {
+            background: var(--white); padding: 15px 0; position: sticky; top: 0; z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .container { width: 92%; max-width: 1000px; margin: 0 auto; }
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
+        
+        .logo { font-size: 1.4rem; font-weight: 800; color: var(--dark); display: flex; align-items: center; gap: 5px; }
+        .logo span { color: var(--primary); }
+        
+        .trust-badge {
+            background: #e0f2fe; color: #0284c7; padding: 6px 12px; border-radius: 50px;
+            font-size: 0.8rem; font-weight: 700; display: flex; align-items: center; gap: 5px;
+        }
+        .trust-badge::before { content: "✓"; font-weight: 900; }
+
+        /* --- 3. HERO SECTION (Hard Sell) --- */
+        .hero {
+            background: linear-gradient(180deg, var(--white) 0%, var(--primary-bg) 100%);
+            padding: 40px 0 20px; text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.2rem; line-height: 1.2; color: var(--dark); margin-bottom: 10px;
+        }
+        .hero h1 span { color: #0284c7; }
+        .hero p { font-size: 1rem; color: #64748b; margin-bottom: 25px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        
+        .guarantee-grid {
+            display: flex; justify-content: center; gap: 15px; margin-bottom: 30px; flex-wrap: wrap;
+        }
+        .guarantee-item { font-size: 0.85rem; font-weight: 600; color: #475569; display: flex; align-items: center; gap: 5px; }
+        .guarantee-item span { color: var(--cta-green); font-size: 1.1rem; }
+
+        /* --- 4. URGENCY BANNER (Countdown) --- */
+        .promo-banner {
+            background: var(--danger); color: white; padding: 12px; border-radius: 12px;
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 30px; box-shadow: 0 10px 20px rgba(239, 68, 68, 0.2);
+        }
+        .promo-text { font-weight: 700; font-size: 0.95rem; }
+        .timer { background: rgba(0,0,0,0.2); padding: 5px 10px; border-radius: 6px; font-family: monospace; font-size: 1.1rem; font-weight: bold; letter-spacing: 1px;}
+
+        /* --- 5. CATEGORY TABS --- */
+        .category-scroll {
+            display: flex; gap: 10px; overflow-x: auto; padding-bottom: 15px;
+            scrollbar-width: none; -ms-overflow-style: none; justify-content: start;
+        }
+        .category-scroll::-webkit-scrollbar { display: none; }
+        
+        .cat-btn {
+            background: white; border: 1px solid #cbd5e1; padding: 10px 20px;
+            border-radius: 50px; font-weight: 600; font-size: 0.9rem; color: #64748b;
+            white-space: nowrap; transition: 0.2s; cursor: pointer;
+        }
+        .cat-btn.active {
+            background: var(--dark); color: white; border-color: var(--dark); box-shadow: 0 5px 15px rgba(15, 23, 42, 0.2);
+        }
+
+        /* --- 6. PRODUCT CARDS (Closing Oriented) --- */
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+        
+        .card {
+            background: white; border-radius: var(--radius); overflow: hidden;
+            border: 1px solid #f1f5f9; box-shadow: var(--shadow-card);
+            position: relative; transition: transform 0.2s;
+        }
+        /* Scarcity Badge */
+        .stock-alert {
+            position: absolute; top: 10px; left: 10px; background: rgba(0,0,0,0.7); 
+            color: #fff; padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; font-weight: 700; z-index: 10;
+        }
+        .stock-alert.low { background: var(--danger); animation: pulse 2s infinite; }
+        
+        .card-img { height: 180px; width: 100%; object-fit: cover; background: #eee; }
+        
+        .card-body { padding: 15px; }
+        .card-title { font-size: 1.1rem; font-weight: 800; color: var(--dark); margin-bottom: 5px; display: flex; justify-content: space-between; align-items: center; }
+        .rating { font-size: 0.8rem; color: #fbbf24; }
+        
+        .specs { display: flex; gap: 10px; font-size: 0.8rem; color: #64748b; margin-bottom: 15px; }
+        .spec-item { display: flex; align-items: center; gap: 4px; background: #f1f5f9; padding: 4px 8px; border-radius: 4px; }
+
+        .price-section { margin-bottom: 15px; }
+        .price-label { font-size: 0.75rem; color: #94a3b8; text-decoration: line-through; }
+        .price-final { font-size: 1.3rem; font-weight: 800; color: var(--cta-orange); }
+        .price-unit { font-size: 0.8rem; color: #64748b; font-weight: normal; }
+
+        /* TOMBOL CTA DI CARD */
+        .btn-card {
+            display: flex; width: 100%; background: var(--cta-green); color: white;
+            padding: 12px; border-radius: 10px; font-weight: 700; justify-content: center;
+            align-items: center; gap: 8px; transition: 0.2s; box-shadow: 0 4px 10px rgba(37, 211, 102, 0.2);
+        }
+        .btn-card:active { transform: scale(0.98); }
+        
+        /* --- 7. REVIEWS (Social Proof) --- */
+        .review-section { margin-top: 40px; background: white; padding: 30px 0; border-radius: 20px; }
+        .review-item { border-bottom: 1px solid #f1f5f9; padding-bottom: 15px; margin-bottom: 15px; }
+        .review-header { display: flex; justify-content: space-between; margin-bottom: 5px; }
+        .reviewer-name { font-weight: 700; color: var(--dark); }
+        .review-text { font-size: 0.9rem; color: #475569; font-style: italic; }
+
+        /* --- 8. STICKY BOTTOM BAR (Mobile Conversion King) --- */
+        .sticky-bar {
+            position: fixed; bottom: 0; left: 0; width: 100%;
+            background: white; padding: 12px 20px;
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.1); z-index: 999;
+            display: flex; align-items: center; justify-content: space-between; gap: 15px;
+        }
+        .sticky-info { font-size: 0.8rem; color: #64748b; display: none; }
+        .btn-sticky {
+            flex-grow: 1; background: var(--cta-green); color: white;
+            padding: 14px; border-radius: 50px; text-align: center;
+            font-weight: 800; font-size: 1rem; box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+            display: flex; justify-content: center; align-items: center; gap: 8px;
+            animation: bounce 3s infinite;
+        }
+        @media(min-width: 768px) {
+            .sticky-bar { display: none; } /* Hide on desktop, use standard floating */
+            .sticky-info { display: block; }
+            .hero h1 { font-size: 3rem; }
+        }
+
+        /* --- 9. UTILITIES --- */
+        .hidden { display: none; }
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.7; } 100% { opacity: 1; } }
+        @keyframes bounce { 0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 40% {transform: translateY(-5px);} 60% {transform: translateY(-3px);} }
+        
+        /* Floating WA Desktop */
+        .float-desktop {
+            position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px;
+            background: var(--cta-green); border-radius: 50%; display: flex;
+            align-items: center; justify-content: center; color: white;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2); z-index: 1000; cursor: pointer;
+        }
+        .float-desktop:hover { transform: scale(1.1); }
+        @media(max-width: 767px) { .float-desktop { display: none; } } /* Hide on mobile, use sticky bar */
+
+    </style>
 </head>
 <body>
 
-    <!-- Navbar Marketplace Style -->
-    <nav class="navbar" id="navbar">
-        <div class="container nav-container">
-            <a href="#" class="logo">Super<span class="dot">.</span>Rent</a>
-            
-            <!-- Search Bar Mockup -->
-            <div class="search-bar fade-in">
-                <input type="text" placeholder="Cari mobil (ex: Avanza, Brio)..." disabled>
-                <button>🔍</button>
-            </div>
-
-            <ul class="nav-links">
-                <li><a href="#katalog">Katalog</a></li>
-                <li><a href="#reviews">Ulasan</a></li>
-                <li><a href="#promo" class="nav-promo">🔥 Promo</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Hero Marketplace Slider -->
-    <header class="hero-marketplace">
-        <div class="hero-slider">
-            <div class="slide active" style="background-image: url('https://artrushstd.github.io/super-rent/assets/avanza.webp');">
-                <div class="overlay-gradient"></div>
-                <div class="container slide-content">
-                    <span class="badge">Best Seller</span>
-                    <h1>Rental Mobil Jogja <br>Lepas Kunci Mulai 199K</h1>
-                    <p>Unit bersih, wangi, syarat mudah. Booking sekarang!</p>
-                </div>
-            </div>
-            <!-- Slide 2: Tourism -->
-            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1596402184320-715175d0cd66?q=80&w=2070');">
-                <div class="overlay-gradient"></div>
-                <div class="container slide-content">
-                    <span class="badge yellow">City Tour</span>
-                    <h1>Paket Wisata Jogja <br>Keliling Jogja Murah</h1>
-                    <p>All in Driver + BBM. Nikmati liburan tanpa ribet.</p>
-                </div>
-            </div>
+    <!-- HEADER: Minimalist -->
+    <header class="header">
+        <div class="container nav-flex">
+            <a href="#" class="logo">Super<span>.Rent</span></a>
+            <div class="trust-badge">Terpercaya & Resmi</div>
         </div>
     </header>
 
-    <!-- Running Text Info -->
-    <div class="running-text-container">
-        <div class="running-text">
-            <span>📢 INFO PENTING: Harga Paket Wisata sudah All-In (Mobil + Driver + BBM) | Layanan Antar Jemput Bandara YIA 24 Jam Ready | Diskon Khusus Pemakaian di atas 3 Hari! 📢</span>
+    <!-- HERO: Hard Sell -->
+    <section class="hero">
+        <div class="container">
+            <h1>Rental Mobil Jogja<br><span>Ready 24 Jam</span></h1>
+            <p>Unit bersih, wangi, lepas kunci atau dengan driver. <br><strong>Garansi uang kembali jika unit tidak sesuai!</strong></p>
+            
+            <div class="guarantee-grid">
+                <div class="guarantee-item"><span>🛡️</span> Resmi & Aman</div>
+                <div class="guarantee-item"><span>🚿</span> Unit Steril</div>
+                <div class="guarantee-item"><span>🚀</span> Antar Cepat</div>
+            </div>
+
+            <!-- Urgency Banner -->
+            <div class="promo-banner">
+                <div class="promo-text">🔥 Promo Diskon 10% Berakhir Dalam:</div>
+                <div class="timer" id="countdown">04:59:00</div>
+            </div>
+
+            <!-- Categories -->
+            <div class="category-scroll">
+                <button class="cat-btn active" onclick="filterItems('all', this)">Semua Unit</button>
+                <button class="cat-btn" onclick="filterItems('lepaskunci', this)">🔑 Lepas Kunci</button>
+                <button class="cat-btn" onclick="filterItems('allin', this)">👨‍✈️ +Driver (All In)</button>
+                <button class="cat-btn" onclick="filterItems('wisata', this)">⛰️ Paket Wisata</button>
+            </div>
         </div>
+    </section>
+
+    <!-- MAIN CATALOG -->
+    <section class="container" style="margin-top: 20px;">
+        <div class="grid" id="productGrid">
+
+            <!-- PRODUK 1: Spin (Termurah) -->
+            <div class="card item lepaskunci">
+                <div class="stock-alert">🔥 Termurah</div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/2013_Chevrolet_Spin_1.5_LTZ_wagon_%282015-12-08%29.jpg/640px-2013_Chevrolet_Spin_1.5_LTZ_wagon_%282015-12-08%29.jpg" class="card-img" alt="Spin">
+                <div class="card-body">
+                    <div class="card-title">Chevrolet Spin <span class="rating">⭐ 4.9</span></div>
+                    <div class="specs">
+                        <div class="spec-item">⛽ Bensin</div>
+                        <div class="spec-item">⚙️ Manual</div>
+                        <div class="spec-item">👤 7 Seat</div>
+                    </div>
+                    <div class="price-section">
+                        <div class="price-label">Rp 250.000</div>
+                        <div class="price-final">Rp 199.000 <span class="price-unit">/24 Jam</span></div>
+                    </div>
+                    <a href="https://wa.me/6288225648186?text=Halo%20Admin,%20saya%20mau%20booking%20promo%20*Chevrolet%20Spin*%20harga%20199rb.%20Masih%20ready?" class="btn-card">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                        Booking Cepat
+                    </a>
+                </div>
+            </div>
+
+            <!-- PRODUK 2: Avanza (Popular) -->
+            <div class="card item lepaskunci">
+                <div class="stock-alert low">⚡ Sisa 2 Unit</div>
+                <img src="https://imgcdnblog.carbay.com/wp-content/uploads/2021/11/10133405/Toyota-Avanza-2022-1.jpg" class="card-img" alt="Avanza">
+                <div class="card-body">
+                    <div class="card-title">New Avanza FWD <span class="rating">⭐ 5.0</span></div>
+                    <div class="specs">
+                        <div class="spec-item">❄️ AC Dingin</div>
+                        <div class="spec-item">⚙️ Matic</div>
+                        <div class="spec-item">👤 7 Seat</div>
+                    </div>
+                    <div class="price-section">
+                        <div class="price-label">Rp 400.000</div>
+                        <div class="price-final">Rp 349.000 <span class="price-unit">/Hari</span></div>
+                    </div>
+                    <a href="https://wa.me/6288225648186?text=Halo%20Admin,%20saya%20mau%20booking%20*New%20Avanza*%20harga%20promo.%20Masih%20ready?" class="btn-card">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                        Amankan Unit
+                    </a>
+                </div>
+            </div>
+
+            <!-- PRODUK 3: Innova (VIP) -->
+            <div class="card item allin">
+                <div class="stock-alert">👑 VIP Choice</div>
+                <img src="https://s3-ap-southeast-1.amazonaws.com/moladin-assets/blog/wp-content/uploads/2020/10/14164150/Toyota-Kijang-Innova-TRD-Sportivo-Limited-4.jpg" class="card-img" alt="Innova">
+                <div class="card-body">
+                    <div class="card-title">Innova Reborn <span class="rating">⭐ 5.0</span></div>
+                    <div class="specs">
+                        <div class="spec-item">👨‍✈️ Driver+BBM</div>
+                        <div class="spec-item">💧 Free Air</div>
+                    </div>
+                    <div class="price-section">
+                        <div class="price-label">Rp 900.000</div>
+                        <div class="price-final">Rp 849.000 <span class="price-unit">/All In</span></div>
+                    </div>
+                    <a href="https://wa.me/6288225648186?text=Halo%20Admin,%20saya%20butuh%20*Innova%20Reborn*%20All%20In.%20Untuk%20tanggal..." class="btn-card">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                        Booking VIP
+                    </a>
+                </div>
+            </div>
+
+            <!-- PRODUK 4: Paket Wisata -->
+            <div class="card item wisata">
+                <div class="stock-alert low">⛰️ Best Seller</div>
+                <div class="card-img" style="background: #e0f2fe; display: flex; align-items: center; justify-content: center; font-size: 4rem;">🌋</div>
+                <div class="card-body">
+                    <div class="card-title">Paket Super 2 <span class="rating">⭐ 4.8</span></div>
+                    <div class="specs">
+                        <div class="spec-item">📍 Borobudur</div>
+                        <div class="spec-item">📍 Merapi</div>
+                    </div>
+                    <div class="price-section">
+                        <div class="price-label">Rp 650.000</div>
+                        <div class="price-final">Rp 550.000 <span class="price-unit">/Mobil</span></div>
+                    </div>
+                    <a href="https://wa.me/6288225648186?text=Halo%20Admin,%20saya%20tertarik%20*Paket%20Wisata%20Super%202*." class="btn-card">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                        Pilih Paket Ini
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SOCIAL PROOF -->
+    <section class="container review-section">
+        <h3 style="text-align: center; margin-bottom: 20px; color: var(--dark);">Apa Kata Pelanggan Kami?</h3>
+        <div class="review-item">
+            <div class="review-header">
+                <span class="reviewer-name">Andi S. (Jakarta)</span>
+                <span class="rating">⭐⭐⭐⭐⭐</span>
+            </div>
+            <p class="review-text">"Gila sih, responnya cepet banget. Unit Avanza-nya bersih, wangi, AC dingin. Recommended buat yang mau lepas kunci."</p>
+        </div>
+        <div class="review-item">
+            <div class="review-header">
+                <span class="reviewer-name">Siti M. (Surabaya)</span>
+                <span class="rating">⭐⭐⭐⭐⭐</span>
+            </div>
+            <p class="review-text">"Paket wisatanya murah tapi pelayanan VIP. Driver sabar banget nungguin foto-foto."</p>
+        </div>
+        <center>
+            <a href="https://wa.me/6288225648186" style="color: var(--primary); font-weight: 700; font-size: 0.9rem;">Lihat 500+ Review Lainnya di WhatsApp >></a>
+        </center>
+    </section>
+
+    <!-- STICKY BOTTOM BAR (MOBILE) -->
+    <div class="sticky-bar">
+        <div class="sticky-info">Butuh mobil sekarang?</div>
+        <a href="https://wa.me/6288225648186?text=Halo%20Admin,%20saya%20butuh%20mobil%20sekarang.%20Bisa%20dibantu?" class="btn-sticky">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+            Chat Admin (Online)
+        </a>
     </div>
 
-    <!-- Marketplace Catalog Section -->
-    <section id="katalog" class="section">
-        <div class="container">
-            <div class="catalog-header">
-                <h2>Pilih Kendaraan & Paket</h2>
-                <p>Temukan harga terbaik sesuai kebutuhan perjalanan Anda</p>
-            </div>
-
-            <!-- Filter Categories -->
-            <div class="filter-container sticky-filter">
-                <button class="filter-btn active" onclick="filterSelection('all')">Semua</button>
-                <button class="filter-btn" onclick="filterSelection('lepaskunci')">🔑 Lepas Kunci</button>
-                <button class="filter-btn" onclick="filterSelection('allin')">👨‍✈️ Dengan Driver (All In)</button>
-                <button class="filter-btn" onclick="filterSelection('wisata')">gng Paket Wisata</button>
-                <button class="filter-btn" onclick="filterSelection('transfer')">✈️ Antar Jemput</button>
-            </div>
-
-            <!-- Grid Products (Data from PDF) -->
-            <div class="product-grid">
-                
-                <!-- === LEPAS KUNCI === -->
-                <!-- Chevrolet Spin (Termurah) -->
-                <div class="product-card filter-item lepaskunci">
-                    <div class="product-img">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/2013_Chevrolet_Spin_1.5_LTZ_wagon_%282015-12-08%29.jpg/640px-2013_Chevrolet_Spin_1.5_LTZ_wagon_%282015-12-08%29.jpg" alt="Sewa Mobil Spin Jogja">
-                        <span class="tag-price-drop">Termurah</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Chevrolet Spin LTZ</h3>
-                        <div class="specs">
-                            <span>👤 7 Seat</span><span>⚙️ Manual</span>
-                        </div>
-                        <p class="features">✅ Clean & Fragrant <br>✅ Free Umbrella</p>
-                        <div class="price-box">
-                            <span class="price-label">Per 24 Jam</span>
-                            <span class="price">Rp 199.000</span>
-                        </div>
-                        <a href="https://wa.me/6288225648186?text=Halo%20Super.Rent,%20saya%20mau%20sewa%20Spin%20LTZ%20Lepas%20Kunci" class="btn-book">Sewa Sekarang</a>
-                    </div>
-                </div>
-
-                <!-- Honda Brio -->
-                <div class="product-card filter-item lepaskunci">
-                    <div class="product-img">
-                        <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?q=80&w=1000&auto=format&fit=crop" alt="Rental Brio Jogja">
-                    </div>
-                    <div class="product-info">
-                        <h3>Honda Brio</h3>
-                        <div class="specs">
-                            <span>👤 5 Seat</span><span>⚙️ Matic</span>
-                        </div>
-                        <p class="features">✅ City Car Hemat <br>✅ Best for Students</p>
-                        <div class="price-box">
-                            <span class="price-label">Per Hari</span>
-                            <span class="price">Rp 299.000</span>
-                        </div>
-                        <a href="https://wa.me/6288225648186?text=Halo%20Super.Rent,%20saya%20mau%20sewa%20Honda%20Brio" class="btn-book">Sewa Sekarang</a>
-                    </div>
-                </div>
-
-                <!-- New Avanza FWD -->
-                <div class="product-card filter-item lepaskunci">
-                    <div class="product-img">
-                        <img src="https://imgcdnblog.carbay.com/wp-content/uploads/2021/11/10133405/Toyota-Avanza-2022-1.jpg" alt="Rental Avanza Jogja">
-                        <span class="tag-popular">Terlaris</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>New Avanza FWD</h3>
-                        <div class="specs">
-                            <span>👤 7 Seat</span><span>⚙️ Man/Mat</span>
-                        </div>
-                        <p class="features">✅ Large Cabin <br>✅ Charge Spot Ready</p>
-                        <div class="price-box">
-                            <span class="price-label">Per Hari</span>
-                            <span class="price">Rp 349.000</span>
-                        </div>
-                        <a href="https://wa.me/6288225648186?text=Halo%20Super.Rent,%20saya%20mau%20sewa%20New%20Avanza" class="btn-book">Sewa Sekarang</a>
-                    </div>
-                </div>
-
-                <!-- Xpander Cross -->
-                <div class="product-card filter-item lepaskunci">
-                    <div class="product-img">
-                        <img src="https://asset.kompas.com/crops/O-G6a8uP3fFq7XyK8KkC8KkC8Kk=/0x0:1000x667/750x500/data/photo/2019/11/12/5dca4a6a5a6a5.jpg" alt="Sewa Xpander Jogja">
-                    </div>
-                    <div class="product-info">
-                        <h3>Xpander Cross</h3>
-                        <div class="specs">
-                            <span>👤 7 Seat</span><span>⚙️ Manual</span>
-                        </div>
-                        <p class="features">✅ Premium Cabin <br>✅ Family & Bestie Trip</p>
-                        <div class="price-box">
-                            <span class="price-label">Per 24 Jam</span>
-                            <span class="price">Rp 349.000</span>
-                        </div>
-                        <a href="https://wa.me/6288225648186?text=Halo%20Super.Rent,%20saya%20mau%20sewa%20Xpander%20Cross" class="btn-book">Sewa Sekarang</a>
-                    </div>
-                </div>
-
-                <!-- === ALL IN (DRIVER + BBM) === -->
-                <!-- Innova Reborn -->
-                <div class="product-card filter-item allin">
-                    <div class="product-img">
-                        <img src="https://s3-ap-southeast-1.amazonaws.com/moladin-assets/blog/wp-content/uploads/2020/10/14164150/Toyota-Kijang-Innova-TRD-Sportivo-Limited-4.jpg" alt="Rental Innova Reborn Jogja">
-                        <span class="tag-popular">VIP Choice</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Innova Reborn (All In)</h3>
-                        <div class="specs">
-                            <span>👤 7 Seat</span><span>👨‍✈️ Driver+BBM</span>
-                        </div>
-                        <p class="features">✅ Free Mineral Water <br>✅ Premium Comfort</p>
-                        <div class="price-box">
-                            <span class="price-label">Per Hari (All In)</span>
-                            <span class="price">Rp 849.000</span>
-                        </div>
-                        <a href="https://wa.me/6288225648186?text=Halo%20Super.Rent,%20saya%20mau%20Innova%20Reborn%20All%20In" class="btn-book">Booking</a>
-                    </div>
-                </div>
-
-                <!-- Hiace Premio -->
-                <div class="product-card filter-item allin">
-                    <div class="product-img">
-                        <img src="https://www.toyota.astra.co.id/sites/default/files/2021-08/1_Hiace%20Premio.png" alt="Sewa Hiace Jogja">
-                    </div>
-                    <div class="product-info">
-                        <h3>Hiace Premio (All In)</h3>
-                        <div class="specs">
-                            <span>👤 14 Seat</span><span>👨‍✈️ Driver+BBM</span>
-                        </div>
-                        <p class="features">✅ Rombongan/Gathering <br>✅ Kabin Luas & Mewah</p>
-                        <div class="price-box">
-                            <span class="price-label">Per Hari (All In)</span>
-                            <span class="price">Rp 1.399.000</span>
-                        </div>
-                        <a href="https://wa.me/6288225648186?text=Halo%20Super.Rent,%20saya%20mau%20Hiace%20Premio%20All%20In" class="btn-book">Booking</a>
-                    </div>
-                </div>
-
-                <!-- Toyota Alphard -->
-                <div class="product-card filter-item allin">
-                    <div class="product-img">
-                        <img src="https://www.toyota.astra.co.id/sites/default/files/2020-09/1_alphard-hybrid.png" alt="Sewa Alphard Jogja">
-                        <span class="tag-price-drop">Luxury</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Toyota Alphard (All In)</h3>
-                        <div class="specs">
-                            <span>👤 5-6 Seat</span><span>👨‍✈️ VIP Service</span>
-                        </div>
-                        <p class="features">✅ Wedding/Business <br>✅ Free Fruits & Mineral</p>
-                        <div class="price-box">
-                            <span class="price-label">Per Hari (All In)</span>
-                            <span class="price">Rp 3.199.000</span>
-                        </div>
-                        <a href="https://wa.me/6288225648186?text=Halo%20Super.Rent,%20saya%20mau%20Sewa%20Alphard" class="btn-book">Booking VIP</a>
-                    </div>
-                </div>
-
-                <!-- === PAKET WISATA (CITY TOUR) === -->
-                <!-- Super 2 (Borobudur/Merapi) -->
-                <div class="product-card filter-item wisata">
-                    <div class="product-img">
-                        <div class="img-placeholder bg-blue">⛰️</div>
-                    </div>
-                    <div class="product-info">
-                        <h3>Paket Super 2 (Merapi)</h3>
-                        <p class="route-list">📍 Borobudur<br>📍 Lava Tour<br>📍 Kopi Klothok<br>📍 Merapi Park</p>
-                        <div class="price-box">
-                            <span class="price-label">Paket All In</span>
-                            <span class="price">Rp 550.000</span>
-                        </div>
-                        <a href="https://wa.me/6288225648186?text=Halo%20Super.Rent,%20saya%20mau%20Paket%20Wisata%20Super%202" class="btn-book">Pilih Paket</a>
-                    </div>
-                </div>
-
-                <!-- Super 4 (Pantai) -->
-                <div class="product-card filter-item wisata">
-                    <div class="product-img">
-                        <div class="img-placeholder bg-orange">🌊</div>
-                    </div>
-                    <div class="product-info">
-                        <h3>Paket Super 4 (Pantai)</h3>
-                        <p class="route-list">📍 Taman Sari<br>📍 Parangtritis<br>📍 Obelix Sea View<br>📍 Pantai Laguna</p>
-                        <div class="price-box">
-                            <span class="price-label">Paket All In</span>
-                            <span class="price">Rp 550.000</span>
-                        </div>
-                        <a href="https://wa.me/6288225648186?text=Halo%20Super.Rent,%20saya%20mau%20Paket%20Wisata%20Super%204" class="btn-book">Pilih Paket</a>
-                    </div>
-                </div>
-
-                <!-- === ANTAR JEMPUT (TRANSFER) === -->
-                <div class="product-card filter-item transfer">
-                    <div class="product-img">
-                        <div class="img-placeholder bg-green">✈️</div>
-                    </div>
-                    <div class="product-info">
-                        <h3>Drop/Pickup YIA</h3>
-                        <p class="features">Antar jemput Bandara YIA - Kota Jogja (atau sebaliknya). Privat Trip.</p>
-                        <div class="price-box">
-                            <span class="price-label">Mulai Dari</span>
-                            <span class="price">Rp 250.000</span>
-                        </div>
-                        <a href="https://wa.me/6288225648186?text=Halo%20Super.Rent,%20saya%20butuh%20Antar%20Jemput%20YIA" class="btn-book">Pesan Sekarang</a>
-                    </div>
-                </div>
-
-            </div> <!-- End Grid -->
-        </div>
-    </section>
-
-    <!-- Reviews Section (Auto Slide) -->
-    <section id="reviews" class="section bg-light">
-        <div class="container">
-            <div class="catalog-header">
-                <h2>Apa Kata Mereka?</h2>
-                <p>Pengalaman nyata pelanggan Super.Rent</p>
-            </div>
-            <div class="review-wrapper">
-                <div class="review-track" id="reviewTrack">
-                    <!-- Review 1 -->
-                    <div class="review-card">
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <p>"Rental mobil jogja lepas kunci prosesnya cepat banget. Spin LTZ nya irit dan kuat buat nanjak ke Gunung Kidul. Makasih Mas Admin!"</p>
-                        <div class="user">
-                            <div class="avatar">AS</div>
-                            <span>Aditya Saputra <small>(Surabaya)</small></span>
-                        </div>
-                    </div>
-                    <!-- Review 2 -->
-                    <div class="review-card">
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <p>"Ambil paket City Tour Super 2. Driver ramah, sabar nungguin kami foto-foto di Merapi. Tour keliling jogja murah tapi pelayanan kelas atas."</p>
-                        <div class="user">
-                            <div class="avatar">RW</div>
-                            <span>Ratna Wulandari <small>(Jakarta)</small></span>
-                        </div>
-                    </div>
-                    <!-- Review 3 -->
-                    <div class="review-card">
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <p>"Sewa Hiace untuk rombongan kantor. Unit bersih, AC dingin pol. Rental mobil jogja terpercaya pokoknya!"</p>
-                        <div class="user">
-                            <div class="avatar">DP</div>
-                            <span>Dimas Pratama <small>(Bandung)</small></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer Marketplace -->
-    <footer>
-        <div class="container footer-grid">
-            <div class="footer-info">
-                <h3>Super.Rent</h3>
-                <p>Platform marketplace rental mobil Jogja terpercaya. Menyediakan sewa mobil lepas kunci, paket wisata, dan wedding car dengan harga transparan.</p>
-                <p class="contact">📞 +62 882-2564-8186</p>
-            </div>
-            <div class="footer-links">
-                <h4>Kategori Populer</h4>
-                <a href="#">Rental Avanza Jogja</a>
-                <a href="#">Sewa Hiace Murah</a>
-                <a href="#">Paket Wisata Borobudur</a>
-                <a href="#">Drop Bandara YIA</a>
-            </div>
-        </div>
-        <div class="copyright">
-            &copy; 2024 Super.Rent - Solusi Transportasi Jogja.
-        </div>
-    </footer>
-
-    <!-- Floating WhatsApp Action -->
-    <a href="https://wa.me/6288225648186?text=Halo%20Admin,%20saya%20mau%20tanya%20ketersediaan%20unit" class="float-wa">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat WA">
-        <span>Chat Admin</span>
+    <!-- FLOATING WA DESKTOP -->
+    <a href="https://wa.me/6288225648186?text=Halo%20Admin%20Super.Rent" class="float-desktop">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
     </a>
 
-    <script src="script.js"></script>
+    <script>
+        // 1. FILTER FUNCTION
+        function filterItems(category, btnElement) {
+            // Update Button Style
+            document.querySelectorAll('.cat-btn').forEach(btn => btn.classList.remove('active'));
+            btnElement.classList.add('active');
+
+            // Filter Grid Items
+            const items = document.querySelectorAll('.item');
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        }
+
+        // 2. COUNTDOWN TIMER (Urgency)
+        // Set timer 5 jam dari sekarang setiap kali direfresh (Psikologi closing)
+        let duration = 5 * 60 * 60; // 5 hours in seconds
+        const display = document.getElementById('countdown');
+
+        setInterval(() => {
+            let hours = Math.floor(duration / 3600);
+            let minutes = Math.floor((duration % 3600) / 60);
+            let seconds = duration % 60;
+
+            hours = hours < 10 ? "0" + hours : hours;
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            display.textContent = hours + ":" + minutes + ":" + seconds;
+
+            if (--duration < 0) duration = 5 * 60 * 60; // Reset loop
+        }, 1000);
+
+    </script>
 </body>
 </html>
